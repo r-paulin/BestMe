@@ -1,0 +1,9 @@
+{
+  "name": "me",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test validation.test.js",
+    "start": "python3 -m http.server 4173"
+  }
+}

@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#FFFFFC" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>Best.me onboarding imrpovments | Reinis Pauliņš</title>
+    <meta name="description" content="A design proposal to make onboarding simpler, build trust and help users get started with their plan." />
+    <meta name="robots" content="noindex, nofollow" />
+    <!-- Crawlers resolve relative og:image against the shared page URL (e.g. …/me/). -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Best.me onboarding imrpovments | Reinis Pauliņš" />
+    <meta property="og:description" content="A design proposal to make onboarding simpler, build trust and help users get started with their plan." />
+    <meta property="og:image" content="assets/og-cover.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="537" />
+    <meta property="og:image:alt" content="Me app — Your plan starts here, by Reinis Pauliņš" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Best.me onboarding imrpovments | Reinis Pauliņš" />
+    <meta name="twitter:description" content="A design proposal to make onboarding simpler, build trust and help users get started with their plan." />
+    <meta name="twitter:image" content="assets/og-cover.jpg" />
+    <link rel="image_src" href="assets/og-cover.jpg" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=35" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="phone-wrap">
+        <div class="bezel-back" aria-hidden="true">
+          <div class="bezel__outer"></div>
+          <div class="bezel__inner"></div>
+        </div>
+        <div class="phone">
+          <div class="status-bar" aria-hidden="true">
+            <div class="status-bar__side"><span class="status-bar__time">12:00</span></div>
+            <div class="status-bar__island"></div>
+            <div class="status-bar__side">
+              <img src="assets/status-cellular.svg" alt="" width="19" height="12" />
+              <img src="assets/status-wifi.svg" alt="" width="17" height="12" />
+              <img src="assets/status-battery.svg" alt="" width="27" height="13" />
+            </div>
+          </div>
+
+          <!-- Welcome -->
+          <section class="screen" data-screen="welcome">
+            <div class="screen-scroll">
+              <div class="welcome-top">
+                <img class="brand" src="assets/brand-me.png" alt="Me" />
+                <div class="welcome-copy">
+                  <h1 class="type-large" style="color: var(--grey-alpha-900)">Your plan starts here</h1>
+                  <p class="type-body muted">Set up your plan and explore tools to support your goals</p>
+                </div>
+              </div>
+              <div class="pad">
+                <div class="section-head">
+                  <p class="type-body">Explore your features</p>
+                  <p class="type-caption" style="color: var(--green-700)">2 of 5 included</p>
+                </div>
+                <div class="feature-list">
+                  <div class="feature-card feature-card--active">
+                    <div class="feature-icon feature-icon--on"><img src="assets/icon-unlocked.svg" alt="" /></div>
+                    <div class="feature-copy"><strong class="type-body">Basic plan</strong><span class="type-caption muted-soft">Track your fasting</span></div>
+                    <img class="feature-check" src="assets/icon-check-circle.svg" alt="" width="24" height="24" />
+                  </div>
+                  <div class="feature-card feature-card--active">
+                    <div class="feature-icon feature-icon--on"><img src="assets/icon-unlocked.svg" alt="" /></div>
+                    <div class="feature-copy"><strong class="type-body">Meal planner</strong><span class="type-caption muted-soft">Meals planned for you</span></div>
+                    <img class="feature-check" src="assets/icon-check-circle.svg" alt="" width="24" height="24" />
+                  </div>
+                  <button class="feature-card feature-card--locked" type="button" data-go="offer">
+                    <div class="feature-icon feature-icon--off"><img src="assets/icon-locked.svg" alt="" /></div>
+                    <div class="feature-copy"><strong class="type-body">Personal weight loss expert</strong><span class="type-caption muted">Get personal nutrition support</span></div>
+                    <span class="type-caption feature-status">Unlock</span>
+                  </button>
+                  <button class="feature-card feature-card--locked" type="button" data-go="workouts">
+                    <div class="feature-icon feature-icon--off"><img src="assets/icon-locked.svg" alt="" /></div>
+                    <div class="feature-copy"><strong class="type-body">Workouts</strong><span class="type-caption muted">Work out at home</span></div>
+                    <span class="type-caption feature-status">Unlock</span>
+                  </button>
+                  <button class="feature-card feature-card--locked" type="button" data-go="template">
+                    <div class="feature-icon feature-icon--off"><img src="assets/icon-locked.svg" alt="" /></div>
+                    <div class="feature-copy"><strong class="type-body">Shopping list</strong><span class="type-caption muted">Shop for your selected meals</span></div>
+                    <span class="type-caption feature-status">Unlock</span>
+                  </button>
+                </div>
+              </div>
+              <div class="nav-stack"><button class="btn btn--primary" type="button" data-go="details">Next</button></div>
+            </div>
+          </section>
+
+          <section class="screen" data-screen="template" hidden>
+            <div class="template">
+              <button class="back-btn" type="button" data-go="back" aria-label="Back"><img src="assets/icon-arrow-right.svg" alt="" /></button>
+              <div class="template__body">
+                <img class="template__art" src="assets/template-mark.svg" alt="" width="154" height="154" />
+                <div class="template__copy">
+                  <h1 class="type-large" style="color: var(--grey-alpha-900)">Sorry, no design here</h1>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="screen" data-screen="offers" hidden>
+            <div class="template">
+              <div class="template__body">
+                <img class="template__art" src="assets/template-mark.svg" alt="" width="154" height="154" />
+                <div class="template__copy">
+                  <h1 class="type-large" style="color: var(--grey-alpha-900)">Sorry, no design here</h1>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="screen" data-screen="shopping" hidden>
+            <div class="template">
+              <div class="template__body">
+                <img class="template__art" src="assets/template-mark.svg" alt="" width="154" height="154" />
+                <div class="template__copy">
+                  <h1 class="type-large" style="color: var(--grey-alpha-900)">Sorry, no design here</h1>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Details -->
+          <section class="screen" data-screen="details" id="details" hidden>
+            <div class="screen-scroll">
+              <div class="survey-header">
+                <img class="brand" src="assets/brand-me.png" alt="Me" />
+                <div class="progress" data-progress="1">
+                  <div class="progress__bar"><div class="progress__track"><div class="progress__fill"></div></div><span class="type-caption progress__count">1 / 6</span></div>
+                  <h1 class="type-heading">Tell us about yourself</h1>
+                  <p class="type-body muted">Your details help us tailor your plan to you</p>
+                </div>
+              </div>
+              <div class="pad" style="padding-top: var(--space-24)">
+                <div class="form-stack" style="gap: var(--space-16)">
+                  <label class="field" data-required>
+                    <span class="type-caption field__label">First name <span class="req">*</span></span>
+                    <input id="firstName" name="firstName" autocomplete="given-name" required />
+                  </label>
+                  <label class="field" data-required>
+                    <span class="type-caption field__label">Last name <span class="req">*</span></span>
+                    <input id="lastName" name="lastName" placeholder="Enter your last name" autocomplete="family-name" required />
+                  </label>
+                  <div class="field-row">
+                    <label class="field" data-required>
+                      <span class="type-caption field__label">Age <span class="req">*</span></span>
+                      <input id="age" name="age" inputmode="numeric" required />
+                    </label>
+                    <label class="field" data-required>
+                      <span class="type-caption field__label">Gender <span class="req">*</span></span>
+                      <select id="gender" name="gender" required>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                        <option>Prefer not to say</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="field-row">
+                    <label class="field" data-required>
+                      <span class="type-caption field__label">Height <span class="req">*</span></span>
+                      <input id="height" name="height" inputmode="decimal" required />
+                    </label>
+                    <label class="field">
+                      <span class="type-caption field__label">Height unit</span>
+                      <select id="heightUnit" name="heightUnit"><option>cm</option><option>ft</option></select>
+                    </label>
+                  </div>
+                  <div class="field-row">
+                    <label class="field" data-required>
+                      <span class="type-caption field__label">Current weight <span class="req">*</span></span>
+                      <input id="weight" name="weight" inputmode="decimal" required />
+                    </label>
+                    <label class="field">
+                      <span class="type-caption field__label">Weight unit</span>
+                      <select id="weightUnit" name="weightUnit"><option>kg</option><option>lb</option></select>
+                    </label>
+                  </div>
+                  <label class="field" data-required>
+                    <span class="type-caption field__label">Country <span class="req">*</span></span>
+                    <select id="country" name="country" required>
+                      <option>Latvia</option>
+                      <option>Lithuania</option>
+                      <option>Estonia</option>
+                      <option>United Kingdom</option>
+                      <option>United States</option>
+                      <option>Other</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+              <div class="nav-stack">
+                <button class="btn btn--primary" type="button" data-go="eating">Next</button>
+                <button class="btn btn--secondary" type="button" data-go="welcome">Back</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Eating -->
+          <section class="screen" data-screen="eating" hidden>
+            <div class="screen-scroll">
+              <div class="survey-header">
+                <img class="brand" src="assets/brand-me.png" alt="Me" />
+                <div class="progress" data-progress="2">
+                  <div class="progress__bar"><div class="progress__track"><div class="progress__fill"></div></div><span class="type-caption progress__count">2 / 6</span></div>
+                  <h1 class="type-heading">Choose your eating style</h1>
+                  <p class="type-body muted">Choose what works for you. You can change it later.</p>
+                </div>
+              </div>
+              <div class="pad" style="padding-top: var(--space-24)">
+                <div class="choice-list" style="gap: var(--space-12)" role="radiogroup" aria-label="Choose your eating style">
+                  <button class="diet-card" type="button" data-eating-style="keto" role="radio" aria-checked="false">
+                    <img class="diet-card__img" src="assets/meal-keto.png" alt="" />
+                    <div class="diet-card__body">
+                      <span class="type-subheading">Keto</span>
+                      <span class="type-body muted-soft">Lower in carbs, higher in fat</span>
+                    </div>
+                    <span class="selected-badge"><img src="assets/icon-check.svg" alt="" />Selected</span>
+                  </button>
+                  <button class="diet-card is-selected" type="button" data-eating-style="classic" role="radio" aria-checked="true">
+                    <img class="diet-card__img" src="assets/meal-classic.png" alt="" />
+                    <div class="diet-card__body">
+                      <span class="type-subheading">Classic</span>
+                      <span class="type-body muted-soft">Flexible meals with all food groups</span>
+                    </div>
+                    <span class="selected-badge"><img src="assets/icon-check.svg" alt="" />Selected</span>
+                  </button>
+                </div>
+              </div>
+              <div class="nav-stack">
+                <button class="btn btn--primary" type="button" data-go="meals">Next</button>
+                <button class="btn btn--secondary" type="button" data-go="details">Back</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Meals -->
+          <section class="screen" data-screen="meals" hidden>
+            <div class="screen-scroll">
+              <div class="survey-header">
+                <img class="brand" src="assets/brand-me.png" alt="Me" />
+                <div class="progress" data-progress="3">
+                  <div class="progress__bar"><div class="progress__track"><div class="progress__fill"></div></div><span class="type-caption progress__count">3 / 6</span></div>
+                  <h1 class="type-heading">Make meals work for you</h1>
+                  <p class="type-body muted">Choose the foods and meals that work for you</p>
+                </div>
+              </div>
+              <div class="pad" style="padding-top: var(--space-24); display: flex; flex-direction: column; gap: var(--space-24)">
+                <div>
+                  <h2 class="type-subheading" id="diet-pref-label" style="margin: 0 0 12px">What kind of diet do you prefer?</h2>
+                  <div class="choice-list" role="group" aria-labelledby="diet-pref-label">
+                    <button class="choice choice--check" type="button" data-diets="none" role="checkbox"><span class="type-body" style="color: var(--grey-700)">No specific diet</span><span class="choice__mark"></span></button>
+                    <button class="choice choice--check" type="button" data-diets="no-meat" role="checkbox"><span class="type-body" style="color: var(--grey-700)">Everything except meat</span><span class="choice__mark"></span></button>
+                    <button class="choice choice--check" type="button" data-diets="vegetarian" role="checkbox"><span class="type-body" style="color: var(--grey-700)">Vegetarian</span><span class="choice__mark"></span></button>
+                    <button class="choice choice--check" type="button" data-diets="vegan" role="checkbox"><span class="type-body" style="color: var(--grey-700)">Vegan</span><span class="choice__mark"></span></button>
+                    <button class="choice choice--check" type="button" data-diets="paleo" role="checkbox"><span class="type-body" style="color: var(--grey-700)">Paleo</span><span class="choice__mark"></span></button>
+                  </div>
+                </div>
+                <div>
+                  <h2 class="type-subheading" id="meal-kind-label" style="margin: 0 0 12px">What kind of meals do you prefer?</h2>
+                  <div class="choice-list" role="group" aria-labelledby="meal-kind-label">
+                    <button class="choice choice--check" type="button" data-meal-kinds="quick" role="checkbox"><span class="type-body" style="color: var(--grey-700)">Quick (under 10 min)</span><span class="choice__mark"></span></button>
+                    <button class="choice choice--check" type="button" data-meal-kinds="simple" role="checkbox"><span class="type-body" style="color: var(--grey-700)">Simple (few ingredients)</span><span class="choice__mark"></span></button>
+                    <button class="choice choice--check" type="button" data-meal-kinds="budget" role="checkbox"><span class="type-body" style="color: var(--grey-700)">Budget-friendly</span><span class="choice__mark"></span></button>
+                  </div>
+                </div>
+                <div>
+                  <h2 class="type-subheading" id="variety-label" style="margin: 0 0 12px">How much variety would you like?</h2>
+                  <div class="choice-list" role="group" aria-labelledby="variety-label">
+                    <button class="choice choice--check" type="button" data-variety="quick" role="checkbox"><span class="type-body" style="color: var(--grey-700)">Quick (cooking time under 10min)</span><span class="choice__mark"></span></button>
+                    <button class="choice choice--check" type="button" data-variety="simple" role="checkbox"><span class="type-body" style="color: var(--grey-700)">Simple (only a couple of ingredients)</span><span class="choice__mark"></span></button>
+                    <button class="choice choice--check" type="button" data-variety="economical" role="checkbox"><span class="type-body" style="color: var(--grey-700)">Economical (budget-friendly recipes)</span><span class="choice__mark"></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-stack">
+                <button class="btn btn--primary" type="button" data-go="activity">Next</button>
+                <button class="btn btn--secondary" type="button" data-go="eating">Back</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Activity -->
+          <section class="screen" data-screen="activity" hidden>
+            <div class="screen-scroll">
+              <div class="survey-header">
+                <img class="brand" src="assets/brand-me.png" alt="Me" />
+                <div class="progress" data-progress="4">
+                  <div class="progress__bar"><div class="progress__track"><div class="progress__fill"></div></div><span class="type-caption progress__count">4 / 6</span></div>
+                  <h1 class="type-heading">Tell us about your activity</h1>
+                  <p class="type-body muted">Tell us about your routine so we can understand your needs</p>
+                </div>
+              </div>
+              <div class="pad" style="padding-top: var(--space-24); display: flex; flex-direction: column; gap: var(--space-24)">
+                <div>
+                  <h2 class="type-subheading" id="exercise-label" style="margin: 0 0 12px">How often do you plan to exercise?</h2>
+                  <div class="choice-list" role="radiogroup" aria-labelledby="exercise-label">
+                    <button class="choice is-selected" type="button" data-exercise="none" role="radio"><span class="type-body" style="color: var(--grey-700)">I don’t plan to exercise</span><span class="choice__mark"></span></button>
+                    <button class="choice" type="button" data-exercise="1-2" role="radio"><span class="type-body" style="color: var(--grey-700)">1–2 times a week or less</span><span class="choice__mark"></span></button>
+                    <button class="choice" type="button" data-exercise="3-4" role="radio"><span class="type-body" style="color: var(--grey-700)">3–4 times a week</span><span class="choice__mark"></span></button>
+                    <button class="choice" type="button" data-exercise="5+" role="radio"><span class="type-body" style="color: var(--grey-700)">5 or more times a week</span><span class="choice__mark"></span></button>
+                  </div>
+                </div>
+                <div>
+                  <h2 class="type-subheading" id="activity-label" style="margin: 0 0 12px">How active are you during a typical day?</h2>
+                  <div class="choice-list" role="radiogroup" aria-labelledby="activity-label">
+                    <button class="choice is-selected" type="button" data-activity="sitting" role="radio"><span class="type-body" style="color: var(--grey-700)">Mostly sitting</span><span class="choice__mark"></span></button>
+                    <button class="choice" type="button" data-activity="walking" role="radio"><span class="type-body" style="color: var(--grey-700)">On my feet or walking a lot</span><span class="choice__mark"></span></button>
+                    <button class="choice" type="button" data-activity="demanding" role="radio"><span class="type-body" style="color: var(--grey-700)">Doing physically demanding work</span><span class="choice__mark"></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-stack">
+                <button class="btn btn--primary" type="button" data-go="health">Next</button>
+                <button class="btn btn--secondary" type="button" data-go="meals">Back</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Health -->
+          <section class="screen" data-screen="health" hidden>
+            <div class="screen-scroll">
+              <div class="survey-header">
+                <img class="brand" src="assets/brand-me.png" alt="Me" />
+                <div class="progress" data-progress="5">
+                  <div class="progress__bar"><div class="progress__track"><div class="progress__fill"></div></div><span class="type-caption progress__count">5 / 6</span></div>
+                  <h1 class="type-heading">Tell us about your health</h1>
+                  <p class="type-body muted">Your answers help us take your health needs into account when creating your plan</p>
+                </div>
+              </div>
+              <div class="pad" style="padding-top: var(--space-24); display: flex; flex-direction: column; gap: var(--space-24)">
+                <div>
+                  <h2 class="type-subheading" id="medicines-label" style="margin: 0 0 12px">Are you taking any medicines or supplements?</h2>
+                  <div class="choice-list" role="radiogroup" aria-labelledby="medicines-label">
+                    <button class="choice" type="button" data-medicines="no" role="radio"><span class="type-body" style="color: var(--grey-700)">No</span><span class="choice__mark"></span></button>
+                    <button class="choice is-selected" type="button" data-medicines="yes" role="radio"><span class="type-body" style="color: var(--grey-700)">Yes (tell your nutritionist later)</span><span class="choice__mark"></span></button>
+                  </div>
+                </div>
+                <div>
+                  <h2 class="type-subheading" id="conditions-label" style="margin: 0 0 12px">Do you currently have any health conditions or illnesses?</h2>
+                  <div class="choice-list" role="radiogroup" aria-labelledby="conditions-label">
+                    <button class="choice is-selected" type="button" data-conditions="no" role="radio"><span class="type-body" style="color: var(--grey-700)">No</span><span class="choice__mark"></span></button>
+                    <button class="choice" type="button" data-conditions="yes" role="radio"><span class="type-body" style="color: var(--grey-700)">Yes (tell your nutritionist later)</span><span class="choice__mark"></span></button>
+                  </div>
+                </div>
+                <div>
+                  <h2 class="type-subheading" id="labs-label" style="margin: 0 0 8px">Have any of these test results been outside the normal range?</h2>
+                  <p class="type-body muted" style="margin: 0 0 12px">Select all that apply</p>
+                  <div class="choice-list" role="group" aria-labelledby="labs-label">
+                    <button class="choice choice--check" type="button" data-labs="cholesterol" role="checkbox"><span class="type-body" style="color: var(--grey-700)">High cholesterol</span><span class="choice__mark"></span></button>
+                    <button class="choice choice--check" type="button" data-labs="hemoglobin" role="checkbox"><span class="type-body" style="color: var(--grey-700)">Low hemoglobin and/or ferritin</span><span class="choice__mark"></span></button>
+                    <button class="choice choice--check" type="button" data-labs="uric" role="checkbox"><span class="type-body" style="color: var(--grey-700)">High uric acid</span><span class="choice__mark"></span></button>
+                    <button class="choice choice--check" type="button" data-labs="alt" role="checkbox"><span class="type-body" style="color: var(--grey-700)">High ALT, AST concentration</span><span class="choice__mark"></span></button>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-stack">
+                <button class="btn btn--primary" type="button" data-go="fasting">Next</button>
+                <button class="btn btn--secondary" type="button" data-go="activity">Back</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Fasting -->
+          <section class="screen" data-screen="fasting" hidden>
+            <div class="screen-scroll">
+              <div class="survey-header">
+                <img class="brand" src="assets/brand-me.png" alt="Me" />
+                <div class="progress" data-progress="6">
+                  <div class="progress__bar"><div class="progress__track"><div class="progress__fill"></div></div><span class="type-caption progress__count">6 / 6</span></div>
+                  <h1 class="type-heading">Choose a fasting schedule</h1>
+                  <p class="type-body muted">Choose a schedule that works for you</p>
+                </div>
+              </div>
+              <div class="pad" style="padding-top: var(--space-24)">
+                <div class="choice-list" role="radiogroup" aria-label="Choose a fasting schedule">
+                  <button class="choice choice--soft is-selected" type="button" data-fasting="13:11" role="radio">
+                    <span>
+                      <span class="type-subheading" style="display: block">13:11</span>
+                      <span class="type-body">Fast for 13 hours, then eat within an 11-hour window</span>
+                    </span>
+                    <span class="choice__mark"></span>
+                  </button>
+                  <button class="choice" type="button" data-fasting="16:8" role="radio">
+                    <span>
+                      <span class="popular-badge"><img src="assets/icon-thumb-up.svg" alt="" />Most popular</span>
+                      <span class="type-subheading" style="display: block; margin-top: 4px">16:8</span>
+                      <span class="type-body">Fast for 16 hours, then eat within an 8-hour window</span>
+                    </span>
+                    <span class="choice__mark"></span>
+                  </button>
+                  <button class="choice" type="button" data-fasting="18:6" role="radio">
+                    <span>
+                      <span class="type-subheading" style="display: block">18:6</span>
+                      <span class="type-body">Fast for 18 hours, then eat within a 6-hour window</span>
+                    </span>
+                    <span class="choice__mark"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="nav-stack">
+                <button class="btn btn--primary" type="button" data-go="preparing">Next</button>
+                <button class="btn btn--secondary" type="button" data-go="health">Back</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Preparing -->
+          <section class="screen" data-screen="preparing" hidden>
+            <div class="center-hero">
+              <img class="brand brand--lg" src="assets/brand-me-lg.png" alt="Me" />
+              <div class="prep-stage">
+              <svg class="center-hero__art" aria-hidden="true" preserveAspectRatio="xMidYMid meet" overflow="visible" style="display: block;" width="345" height="380" viewBox="0 0 345 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Artwork">
+<g class="star" id="Union"><path d="M33.2704 169.967C32.4994 167.861 29.5006 167.861 28.7296 169.967L25.2258 179.535L15.5902 183.015C13.4699 183.78 13.4699 186.758 15.5902 187.524L25.2258 191.003L28.7296 200.572C29.5006 202.677 32.4994 202.677 33.2704 200.572L36.7742 191.003L46.4097 187.524C48.5301 186.758 48.5301 183.78 46.4097 183.015L36.7742 179.535L33.2704 169.967Z" fill-rule="evenodd" clip-rule="evenodd" fill="#00BC7D"/></g>
+<g class="star" id="Union_2"><path d="M116.801 125.251C116.529 124.508 115.471 124.508 115.199 125.251L113.962 128.628L110.561 129.856C109.813 130.127 109.813 131.178 110.561 131.448L113.962 132.676L115.199 136.053C115.471 136.796 116.529 136.796 116.801 136.053L118.038 132.676L121.439 131.448C122.187 131.178 122.187 130.127 121.439 129.856L118.038 128.628L116.801 125.251Z" fill-rule="evenodd" clip-rule="evenodd" fill="#007A55"/></g>
+<g class="star" id="Union_3"><path d="M62.7362 42.2161C62.1466 40.5946 59.8534 40.5947 59.2638 42.2161L56.5844 49.5844L49.2161 52.2638C47.5946 52.8535 47.5947 55.1466 49.2161 55.7362L56.5844 58.4156L59.2638 65.784C59.8534 67.4053 62.1466 67.4053 62.7362 65.784L65.4156 58.4156L72.7839 55.7362C74.4054 55.1466 74.4054 52.8535 72.7839 52.2638L65.4156 49.5844L62.7362 42.2161Z" fill-rule="evenodd" clip-rule="evenodd" fill="#A4F4CF"/></g>
+<g class="star" id="Union_4"><path d="M229.801 162.987C229.529 162.243 228.471 162.243 228.199 162.987L226.962 166.364L223.561 167.592C222.813 167.862 222.813 168.913 223.561 169.183L226.962 170.411L228.199 173.788C228.471 174.531 229.529 174.531 229.801 173.788L231.038 170.411L234.439 169.183C235.187 168.913 235.187 167.862 234.439 167.592L231.038 166.364L229.801 162.987Z" fill-rule="evenodd" clip-rule="evenodd" fill="#00BC7D"/></g>
+<g class="star" id="Union_5"><path d="M274.801 81.5574C274.529 80.8142 273.471 80.8142 273.199 81.5574L271.962 84.9345L268.561 86.1625C267.813 86.4327 267.813 87.4837 268.561 87.754L271.962 88.982L273.199 92.3591C273.471 93.1022 274.529 93.1022 274.801 92.3591L276.038 88.982L279.439 87.754C280.187 87.4837 280.187 86.4327 279.439 86.1625L276.038 84.9345L274.801 81.5574Z" fill-rule="evenodd" clip-rule="evenodd" fill="#00BC7D"/></g>
+<g class="star" id="Union_6"><path d="M308.938 210.153C307.94 207.428 304.06 207.428 303.062 210.153L298.527 222.535L286.058 227.038C283.314 228.029 283.314 231.883 286.058 232.874L298.527 237.377L303.062 249.759C304.06 252.484 307.94 252.484 308.938 249.759L313.473 237.377L325.942 232.874C328.686 231.883 328.686 228.029 325.942 227.038L313.473 222.535L308.938 210.153Z" fill-rule="evenodd" clip-rule="evenodd" fill="#00BC7D"/></g>
+<path id="Vector" class="ready-check" d="M244.306 281.707L231.86 271.667C230.862 270.868 230.088 269.822 229.614 268.633C229.139 267.444 228.981 266.151 229.155 264.882L230.846 249.007C231.08 246.898 230.84 244.762 230.142 242.759C229.445 240.755 228.307 238.934 226.814 237.43C225.321 235.925 223.51 234.777 221.515 234.068C219.521 233.36 217.393 233.109 215.289 233.336L199.394 235.032C198.128 235.206 196.84 235.047 195.654 234.571C194.469 234.096 193.426 233.319 192.63 232.318L182.822 220.039C181.451 218.457 179.757 217.188 177.855 216.319C175.953 215.45 173.887 215 171.797 215C169.707 215 167.641 215.45 165.739 216.319C163.837 217.188 162.143 218.457 160.772 220.039L150.761 232.522C149.965 233.523 148.923 234.299 147.737 234.775C146.551 235.251 145.263 235.409 143.998 235.235L128.305 233.539C126.201 233.313 124.073 233.563 122.079 234.272C120.084 234.98 118.273 236.129 116.78 237.633C115.287 239.137 114.15 240.958 113.452 242.962C112.754 244.966 112.514 247.101 112.749 249.211L114.44 265.086C114.613 266.355 114.455 267.647 113.981 268.837C113.506 270.026 112.732 271.071 111.734 271.87L99.2885 281.707C97.6379 283.036 96.3058 284.719 95.3905 286.633C94.4752 288.547 94 290.643 94 292.765C94 294.888 94.4752 296.984 95.3905 298.898C96.3058 300.812 97.6379 302.495 99.2885 303.824L111.734 313.864C112.727 314.668 113.497 315.713 113.971 316.902C114.445 318.09 114.606 319.38 114.44 320.648L112.749 336.591C112.514 338.696 112.757 340.827 113.46 342.824C114.163 344.822 115.307 346.634 116.807 348.125C118.272 349.658 120.076 350.826 122.073 351.533C124.07 352.24 126.205 352.467 128.305 352.195L144.201 350.499C145.466 350.325 146.754 350.484 147.94 350.959C149.126 351.435 150.168 352.212 150.964 353.213L160.975 365.696C162.3 367.351 163.978 368.687 165.886 369.605C167.794 370.523 169.884 371 172 371C174.116 371 176.206 370.523 178.114 369.605C180.022 368.687 181.7 367.351 183.025 365.696L193.036 353.213C193.832 352.212 194.874 351.435 196.06 350.959C197.246 350.484 198.534 350.325 199.799 350.499L215.695 352.195C217.795 352.467 219.93 352.24 221.927 351.533C223.924 350.826 225.728 349.658 227.193 348.125C228.693 346.634 229.837 344.822 230.54 342.824C231.243 340.827 231.486 338.696 231.251 336.591L229.56 320.648C229.394 319.38 229.555 318.09 230.029 316.902C230.503 315.713 231.273 314.668 232.266 313.864L244.712 303.824C246.362 302.495 247.694 300.812 248.609 298.898C249.525 296.984 250 294.888 250 292.765C250 290.643 249.525 288.547 248.609 286.633C247.694 284.719 246.362 283.036 244.712 281.707H244.306ZM174.503 313.593C173.46 314.953 172.142 316.077 170.636 316.89C169.129 317.702 167.468 318.185 165.762 318.307C164.055 318.429 162.343 318.186 160.736 317.596C159.13 317.006 157.667 316.081 156.443 314.882L139.939 298.328C139.309 297.696 138.808 296.945 138.467 296.118C138.126 295.292 137.95 294.406 137.95 293.512C137.95 292.617 138.126 291.731 138.467 290.905C138.808 290.078 139.309 289.327 139.939 288.695C140.57 288.062 141.319 287.561 142.143 287.218C142.967 286.876 143.85 286.7 144.742 286.7C145.634 286.7 146.517 286.876 147.341 287.218C148.165 287.561 148.913 288.062 149.544 288.695L165.033 303.959L191.48 268.614C192.556 267.174 194.159 266.223 195.934 265.968C196.814 265.842 197.709 265.891 198.57 266.112C199.43 266.333 200.239 266.722 200.949 267.257C201.66 267.791 202.259 268.461 202.711 269.228C203.164 269.994 203.461 270.843 203.587 271.725C203.713 272.607 203.664 273.505 203.443 274.368C203.223 275.231 202.835 276.042 202.302 276.755L174.503 313.593Z" fill="#00BC7D"/>
+</g>
+</svg>
+              <div class="prep-spinner" role="status" aria-label="Loading">
+                <span class="prep-spinner__graphic">
+                  <img src="assets/spinner.svg" alt="" />
+                </span>
+              </div>
+              </div>
+              <div class="center-copy t-stagger">
+                <h1 class="type-large prep-title t-stagger-line t-stagger-line--1">Preparing your profile</h1>
+                <p class="type-subheading muted prep-sub t-stagger-line t-stagger-line--2">This may take a moment</p>
+              </div>
+            </div>
+            <div class="nav-stack prep-cta">
+              <button class="btn btn--primary" type="button" data-go="home">Let’s go</button>
+            </div>
+          </section>
+
+          <!-- Home -->
+          <section class="screen" data-screen="home" hidden>
+            <div class="screen-scroll home-body">
+              <button class="profile-row" type="button" data-go="template">
+                <div class="avatar"><img src="assets/icon-user.svg" alt="" /></div>
+                <div>
+                  <p class="type-subheading" style="margin: 0" data-user-name>Reinis</p>
+                  <p class="type-caption muted" style="margin: 0">View profile</p>
+                </div>
+              </button>
+              <div class="week" aria-label="Weekday logging status">
+                <div class="day"><div class="day__ring type-caption">Mon</div></div>
+                <div class="day"><div class="day__ring type-caption">Tue</div></div>
+                <div class="day"><div class="day__ring type-caption">Wed</div></div>
+                <div class="day"><div class="day__ring type-caption">Thu</div></div>
+                <div class="day"><div class="day__ring type-caption">Fri</div></div>
+                <div class="day"><div class="day__ring type-caption">Sat</div></div>
+                <div class="day"><div class="day__ring type-caption">Sun</div></div>
+              </div>
+              <div class="stats">
+                <div class="stat"><img src="assets/icon-goal-weight.svg" alt="" /><div class="type-caption stat__label">Weight</div><div class="type-subheading" data-user-weight>108kg</div></div>
+                <div class="stat"><img src="assets/icon-goal-target.svg" alt="" /><div class="type-caption stat__label">To lose</div><div class="type-subheading">20kg</div></div>
+                <div class="stat"><img src="assets/icon-goal-fire.svg" alt="" /><div class="type-caption stat__label">Lost</div><div class="type-subheading">6kg</div></div>
+                <div class="stat"><img src="assets/icon-goal-flag.svg" alt="" /><div class="type-caption stat__label">Goal</div><div class="type-subheading">88kg</div></div>
+              </div>
+              <article class="card fasting-card">
+                <div class="card__top">
+                  <div>
+                    <div class="card__eyebrow type-caption"><img src="assets/icon-goal-weight.svg" alt="" />Fasting</div>
+                    <h2 class="type-heading fasting-title">Start fasting</h2>
+                  </div>
+                  <button class="btn btn--sm fasting-btn" type="button">Start</button>
+                </div>
+                <div class="fasting-idle">
+                  <p class="type-caption muted" style="margin: 0">Start when you’re ready</p>
+                  <p class="type-body" style="margin: 0">Goal: 16h</p>
+                </div>
+                <div class="fasting-active" hidden>
+                  <div class="fasting-meta">
+                    <div>
+                      <p class="type-caption muted" style="margin: 0">Started</p>
+                      <p class="type-body" style="margin: 0" data-fasting-started>Wed, 13:40</p>
+                    </div>
+                    <div>
+                      <p class="type-caption muted" style="margin: 0">Goal</p>
+                      <p class="type-body" style="margin: 0" data-fasting-goal>Thu, 14:00</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="card">
+                <div class="card__eyebrow type-caption"><img src="assets/icon-fork.svg" alt="" />Meals</div>
+                <h2 class="type-heading" style="margin: 0">Your meals for today</h2>
+                <p class="type-caption muted" style="margin: 0">Explore meals in your plan</p>
+                <div class="meal-list">
+                <div class="meal-row"><img src="assets/meal-chicken.png" alt="" /><div><div class="type-body">Chicken &amp; quinoa</div><div class="type-caption muted-soft">20 min · 420 kcal</div></div></div>
+                <div class="meal-row"><img src="assets/meal-salmon.png" alt="" /><div><div class="type-body">Salmon &amp; greens</div><div class="type-caption muted-soft">25 min · 480 kcal</div></div></div>
+                <div class="meal-row"><img src="assets/meal-chickpea.png" alt="" /><div><div class="type-body">Chickpea grain bowl</div><div class="type-caption muted-soft">15 min · 390 kcal</div></div></div>
+                </div>
+                <button class="btn btn--ghost" type="button" data-go="template">View meals</button>
+              </article>
+              <article class="card">
+                <div class="card__eyebrow type-caption"><img src="assets/icon-lock-home.svg" alt="" />Workouts</div>
+                <h2 class="type-heading" style="margin: 0">Move more, feel stronger</h2>
+                <p class="type-body muted" style="margin: 0">Try easy workouts to support your weight loss goals.</p>
+                <button class="btn btn--primary" type="button" data-go="workouts">Start workout</button>
+              </article>
+              <article class="card">
+                <div class="card__eyebrow type-caption"><img src="assets/icon-lock-home.svg" alt="" />Shopping</div>
+                <h2 class="type-heading" style="margin: 0">Shopping list</h2>
+                <p class="type-body muted" style="margin: 0">Get a list based on your selected meals</p>
+                <button class="btn btn--primary" type="button" data-go="template">Add shooping list</button>
+              </article>
+            </div>
+          </section>
+
+          <!-- Workouts -->
+          <section class="screen" data-screen="workouts" hidden>
+            <div class="screen-scroll upsell-body">
+              <button class="back-btn" type="button" data-go="back" aria-label="Back"><img src="assets/icon-arrow-right.svg" alt="" /></button>
+              <div style="display: flex; justify-content: center; margin-bottom: 24px">
+                <img class="brand" src="assets/brand-me.png" alt="Me" />
+              </div>
+              <div class="workout-stack">
+                <div class="workout-promise">
+                  <img class="workout-hero" src="assets/workout-hero.png" alt="" width="690" height="295" />
+                  <h1 class="type-heading workout-lead">
+                    <span data-user-name>Reinis</span>, add <span class="accent">personalised home workouts</span> to your weight loss plan
+                  </h1>
+                </div>
+                <div class="workout-goals">
+                  <article class="workout-goal">
+                    <img src="assets/workout-abs.png" alt="" width="112" height="112" />
+                    <div>
+                      <h2 class="type-body" style="margin: 0; font-weight: 600">Get abs after losing fat</h2>
+                      <p class="type-caption muted" style="margin: 0">It’s possible to shed fat with diet only, but to get abs and toned muscles, working out is mandatory.</p>
+                    </div>
+                  </article>
+                  <article class="workout-goal">
+                    <img src="assets/workout-arms.png" alt="" width="112" height="112" />
+                    <div>
+                      <h2 class="type-body" style="margin: 0; font-weight: 600">Stronger arms and shoulders</h2>
+                      <p class="type-caption muted" style="margin: 0">Exercises in this workout plan are designed to sculpt the male body and make you stronger.</p>
+                    </div>
+                  </article>
+                  <article class="workout-goal">
+                    <img src="assets/workout-pecs.png" alt="" width="112" height="112" />
+                    <div>
+                      <h2 class="type-body" style="margin: 0; font-weight: 600">Sculpt your perfect pecs</h2>
+                      <p class="type-caption muted" style="margin: 0">Get a broad and strong chest with simple, at home exercises. No gym required.</p>
+                    </div>
+                  </article>
+                </div>
+                <div class="workout-ready">
+                  <h2 class="type-heading" style="margin: 0"><span data-user-name>Reinis</span>, your workout plan is ready!</h2>
+                  <p class="type-body muted" style="margin: 0">Losing weight and keeping it off is nearly impossible without workouts!</p>
+                </div>
+                <div class="choice-list" style="gap: 8px">
+                  <div class="benefit">
+                    <img class="benefit__icon" src="assets/icon-check-teal.svg" alt="" />
+                    <div>
+                      <p class="type-body" style="margin: 0; font-weight: 600">No gym needed – we’ll get you fit</p>
+                      <p class="type-caption muted" style="margin: 0">All workouts in your plan will be easily done from home or in the park with little to no equipment needed.</p>
+                    </div>
+                  </div>
+                  <div class="benefit">
+                    <img class="benefit__icon" src="assets/icon-check-teal.svg" alt="" />
+                    <div>
+                      <p class="type-body" style="margin: 0; font-weight: 600">Created by certified fitness trainer</p>
+                      <p class="type-caption muted" style="margin: 0">All workouts and exercises are created and guided by a certified physiotherapist and trainer.</p>
+                    </div>
+                  </div>
+                  <div class="benefit">
+                    <img class="benefit__icon" src="assets/icon-check-teal.svg" alt="" />
+                    <div>
+                      <p class="type-body" style="margin: 0; font-weight: 600">Adjust the intensity of workouts</p>
+                      <p class="type-caption muted" style="margin: 0">Each workout can be edited to match your fitness and energy levels. No over-straining, only improving with just enough challenge!</p>
+                    </div>
+                  </div>
+                  <div class="benefit">
+                    <img class="benefit__icon" src="assets/icon-check-teal.svg" alt="" />
+                    <div>
+                      <p class="type-body" style="margin: 0; font-weight: 600">All-in-one</p>
+                      <p class="type-caption muted" style="margin: 0">Exercises and workouts focused on cardio, strength and recovery for the very best results.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upsell-foot">
+              <button class="btn btn--primary" type="button" data-go="home">Start workout</button>
+              <div class="price-row">
+                <span class="type-body" style="font-weight: 400">$19.90/mon <span class="strike">$39.90/mon</span></span>
+                <span class="discount type-caption">40% OFF</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Offer -->
+          <section class="screen" data-screen="offer" hidden>
+            <div class="screen-scroll upsell-body">
+              <button class="back-btn" type="button" data-go="back" aria-label="Back"><img src="assets/icon-arrow-right.svg" alt="" /></button>
+              <div style="display: flex; justify-content: center; margin-bottom: 24px">
+                <img class="brand" src="assets/brand-me.png" alt="Me" />
+              </div>
+              <h1 class="type-heading" id="expert-label" style="margin: 0 0 24px; text-align: center">Find your personal support</h1>
+              <div class="choice-list" style="gap: 12px; margin-bottom: 24px" role="radiogroup" aria-labelledby="expert-label">
+                <button class="expert is-selected" type="button" data-expert="elina" role="radio">
+                  <div class="expert__rec type-caption">RECOMMENDED FOR YOU</div>
+                  <div class="expert__row">
+                    <img src="assets/expert-elina.png" alt="" />
+                    <div style="flex: 1">
+                      <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap">
+                        <span class="type-subheading">Elina</span><span class="chip type-caption">Weight loss</span>
+                      </div>
+                      <div class="type-caption" style="color: var(--teal-900)">Certified nutritionist</div>
+                      <div class="type-caption muted-soft">Support for your weight-loss goals</div>
+                    </div>
+                    <span class="choice__mark"></span>
+                  </div>
+                </button>
+                <button class="expert" type="button" data-expert="anna" role="radio">
+                  <div class="expert__row">
+                    <img src="assets/expert-anna.png" alt="" />
+                    <div style="flex: 1">
+                      <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap">
+                        <span class="type-subheading">Anna</span><span class="chip chip--muted type-caption">Muscle gain</span>
+                      </div>
+                      <div class="type-caption" style="color: var(--teal-900)">Pro athlete and nutritionist</div>
+                      <div class="type-caption muted-soft">Support for building muscle</div>
+                    </div>
+                    <span class="choice__mark"></span>
+                  </div>
+                </button>
+                <button class="expert" type="button" data-expert="simona" role="radio">
+                  <div class="expert__row">
+                    <img src="assets/expert-simona.png" alt="" />
+                    <div style="flex: 1">
+                      <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap">
+                        <span class="type-subheading">Simona</span><span class="chip chip--muted type-caption">Relaxed</span>
+                      </div>
+                      <div class="type-caption" style="color: var(--teal-900)">Rehabilitation nutritionist</div>
+                      <div class="type-caption muted">Nutrition support at your own pace</div>
+                    </div>
+                    <span class="choice__mark"></span>
+                  </div>
+                </button>
+                <button class="expert" type="button" data-expert="none" role="radio">
+                  <div class="expert__row">
+                    <img src="assets/expert-none.svg" alt="" />
+                    <div style="flex: 1">
+                      <span class="type-subheading">No coach</span>
+                      <div class="type-caption" style="color: var(--grey-700)">Continue with your plan without a coach</div>
+                    </div>
+                    <span class="choice__mark"></span>
+                  </div>
+                </button>
+              </div>
+              <h2 class="type-heading" style="margin: 0 0 20px">Support for your goals</h2>
+              <div class="choice-list" style="gap: 8px; margin-bottom: 24px">
+                <div class="benefit"><img class="benefit__icon" src="assets/icon-check-teal.svg" alt="" /><p class="type-body" style="margin: 0; color: var(--grey-700); font-weight: 400">Get one-to-one nutrition support for your goals.</p></div>
+                <div class="benefit"><img class="benefit__icon" src="assets/icon-check-teal.svg" alt="" /><p class="type-body" style="margin: 0; color: var(--grey-700); font-weight: 400">Your expert will review your profile and guide you with your needs in mind.</p></div>
+                <div class="benefit"><img class="benefit__icon" src="assets/icon-check-teal.svg" alt="" /><p class="type-body" style="margin: 0; color: var(--grey-700); font-weight: 400">Choose the expert who feels right for you.</p></div>
+              </div>
+              <article class="story">
+                <img src="assets/maria.jpg" alt="Maria before and after" />
+                <h3 class="type-subheading" style="margin: 0">Maria (42) lost 10 kg</h3>
+                <p class="type-body" style="margin: 0; color: var(--grey-700); font-weight: 400">“I thank myself for never stopping. Every time I weighed myself, I became noticeably happier. The weight loss plan gave me a great surge of energy and I felt the desire to become more active. My overall well-being also improved significantly.”</p>
+              </article>
+            </div>
+            <div class="upsell-foot">
+              <p class="type-body" style="margin: 0; font-weight: 400; color: var(--grey-700)" data-offer-ends>Offer ends in 10:00</p>
+              <button class="btn btn--primary" type="button" data-go="home">Add my nutrition expert</button>
+              <div class="price-row">
+                <span class="type-body" style="font-weight: 400">$11.97/mon <span class="strike">$19.95/mon</span></span>
+                <span class="discount type-caption">40% OFF</span>
+              </div>
+            </div>
+          </section>
+
+          <nav class="tabbar" data-tabbar hidden aria-label="Main">
+            <div class="tabs">
+              <div class="tabs__thumb" data-tabs-thumb aria-hidden="true"></div>
+              <button class="tab is-active" type="button" data-tab="home" data-go="home" aria-current="page"><span class="tab__icon tab__icon--home" aria-hidden="true"></span>Home</button>
+              <button class="tab" type="button" data-tab="offers" data-go="offers"><span class="tab__icon tab__icon--offers" aria-hidden="true"></span>Offers</button>
+              <button class="tab" type="button" data-tab="shopping" data-go="shopping"><span class="tab__icon tab__icon--shopping" aria-hidden="true"></span>Shopping</button>
+            </div>
+            <button class="chat-fab" type="button" data-go="offer" aria-label="Chat, 1 unread"><img src="assets/icon-chat.svg" alt="" /><span class="badge" aria-hidden="true">1</span></button>
+          </nav>
+
+          <div class="home-indicator" aria-hidden="true"></div>
+        </div>
+        <!-- Hollow frame above the screen: masks VT corner spill without covering content. -->
+        <div class="bezel" aria-hidden="true">
+          <svg class="bezel__matte" width="439" height="892" viewBox="0 0 439 892" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#111111"
+              fill-rule="evenodd"
+              d="M62 0H383A56 56 0 0 1 439 56V836A56 56 0 0 1 383 892H62A56 56 0 0 1 6 836V56A56 56 0 0 1 62 0ZM68 20H377A42 42 0 0 1 419 62V830A42 42 0 0 1 377 872H68A42 42 0 0 1 26 830V62A42 42 0 0 1 68 20Z"
+            />
+          </svg>
+          <div class="side-btn side-btn--vol-up"></div>
+          <div class="side-btn side-btn--vol-down"></div>
+          <div class="side-btn side-btn--power"></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="app.js?v=35"></script>
+  </body>
+</html>
