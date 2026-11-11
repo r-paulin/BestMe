@@ -181,6 +181,11 @@ select {
   align-items: stretch;
 }
 
+.phone-slot {
+  width: 100%;
+  min-height: 100dvh;
+}
+
 .phone-wrap {
   width: 100%;
   min-height: 100dvh;
@@ -1654,19 +1659,33 @@ button.feature-card:active {
   }
 
   .page {
+    /* 56px top + bottom, 16px sides — scale must leave that padding clear. */
+    --phone-scale: min((100dvh - 112px) / 892px, (100dvw - 32px) / 439px);
     align-items: center;
     height: 100dvh;
     min-height: 0;
     overflow: hidden;
-    padding: 24px 16px;
+    padding: 56px 16px;
+  }
+
+  /* Layout box = scaled size; inner wrap keeps design coords and scales from top-left. */
+  .phone-slot {
+    width: calc(439px * var(--phone-scale));
+    height: calc(892px * var(--phone-scale));
+    min-height: 0;
+    position: relative;
+    flex-shrink: 0;
   }
 
   .phone-wrap {
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 439px;
     height: 892px;
-    flex-shrink: 0;
-    zoom: min(1, (100dvh - 48px) / 892);
+    min-height: 0;
+    transform: scale(var(--phone-scale));
+    transform-origin: 0 0;
   }
 
   ::view-transition-group(page) {
