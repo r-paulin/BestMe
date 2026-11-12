@@ -236,6 +236,7 @@ function bindDetails(state) {
       state[key] = el.value;
       saveState(state);
       el.closest(".field")?.classList.remove("is-invalid");
+      el.setAttribute("aria-invalid", "false");
     });
   });
 }
@@ -538,6 +539,7 @@ function wire(state) {
         const input = field.querySelector("input, select");
         const empty = !String(input?.value ?? "").trim();
         field.classList.toggle("is-invalid", empty);
+        input?.setAttribute("aria-invalid", empty ? "true" : "false");
       });
       if (!ok) return;
     }

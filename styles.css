@@ -579,6 +579,15 @@ select {
   border-color: var(--rose-700);
 }
 
+.field__error {
+  display: none;
+  color: var(--rose-700);
+}
+
+.field.is-invalid .field__error {
+  display: block;
+}
+
 .choice {
   display: flex;
   align-items: center;

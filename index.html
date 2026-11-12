@@ -30,7 +30,7 @@
       href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=39" />
+    <link rel="stylesheet" href="styles.css?v=40" />
   </head>
   <body>
     <div class="page">
@@ -147,31 +147,36 @@
                 <div class="form-stack" style="gap: var(--space-16)">
                   <label class="field" data-required>
                     <span class="type-caption field__label">First name <span class="req">*</span></span>
-                    <input id="firstName" name="firstName" autocomplete="given-name" required />
+                    <input id="firstName" name="firstName" autocomplete="given-name" required aria-describedby="firstName-error" />
+                    <span class="field__error type-caption" id="firstName-error">Add your first name</span>
                   </label>
                   <label class="field" data-required>
                     <span class="type-caption field__label">Last name <span class="req">*</span></span>
-                    <input id="lastName" name="lastName" placeholder="Enter your last name" autocomplete="family-name" required />
+                    <input id="lastName" name="lastName" placeholder="Enter your last name" autocomplete="family-name" required aria-describedby="lastName-error" />
+                    <span class="field__error type-caption" id="lastName-error">Add your last name</span>
                   </label>
                   <div class="field-row">
                     <label class="field" data-required>
                       <span class="type-caption field__label">Age <span class="req">*</span></span>
-                      <input id="age" name="age" inputmode="numeric" required />
+                      <input id="age" name="age" inputmode="numeric" required aria-describedby="age-error" />
+                      <span class="field__error type-caption" id="age-error">Add your age</span>
                     </label>
                     <label class="field" data-required>
                       <span class="type-caption field__label">Gender <span class="req">*</span></span>
-                      <select id="gender" name="gender" required>
+                      <select id="gender" name="gender" required aria-describedby="gender-error">
                         <option>Male</option>
                         <option>Female</option>
                         <option>Other</option>
                         <option>Prefer not to say</option>
                       </select>
+                      <span class="field__error type-caption" id="gender-error">Pick a gender</span>
                     </label>
                   </div>
                   <div class="field-row">
                     <label class="field" data-required>
                       <span class="type-caption field__label">Height <span class="req">*</span></span>
-                      <input id="height" name="height" inputmode="decimal" required />
+                      <input id="height" name="height" inputmode="decimal" required aria-describedby="height-error" />
+                      <span class="field__error type-caption" id="height-error">Add your height</span>
                     </label>
                     <label class="field">
                       <span class="type-caption field__label">Height unit</span>
@@ -181,7 +186,8 @@
                   <div class="field-row">
                     <label class="field" data-required>
                       <span class="type-caption field__label">Current weight <span class="req">*</span></span>
-                      <input id="weight" name="weight" inputmode="decimal" required />
+                      <input id="weight" name="weight" inputmode="decimal" required aria-describedby="weight-error" />
+                      <span class="field__error type-caption" id="weight-error">Add your weight</span>
                     </label>
                     <label class="field">
                       <span class="type-caption field__label">Weight unit</span>
@@ -190,7 +196,7 @@
                   </div>
                   <label class="field" data-required>
                     <span class="type-caption field__label">Country <span class="req">*</span></span>
-                    <select id="country" name="country" required>
+                    <select id="country" name="country" required aria-describedby="country-error">
                       <option>Latvia</option>
                       <option>Lithuania</option>
                       <option>Estonia</option>
@@ -198,6 +204,7 @@
                       <option>United States</option>
                       <option>Other</option>
                     </select>
+                    <span class="field__error type-caption" id="country-error">Pick your country</span>
                   </label>
                 </div>
               </div>
@@ -717,6 +724,6 @@
       </div>
       </div>
     </div>
-    <script type="module" src="app.js?v=35"></script>
+    <script type="module" src="app.js?v=40"></script>
   </body>
 </html>
